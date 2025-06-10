@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Hanoi Metro Map</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    html, body {
+      height: 100vh;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      height: 100vh;
+      min-height: 100vh;
+      width: 100vw;
+      min-width: 100vw;
+      position: relative;
+      background: #F5F5F5;
+      overflow: hidden;
+    }
+    .bottom-center-buttons {
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 32px;
+      display: flex;
+      justify-content: center;
+      gap: 24px;
+      z-index: 10;
+    }
+    .map-scroll-container {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      width: 100vw;
+      height: 100vh;
+      overflow-x: auto;
+      overflow-y: hidden;
+      z-index: 1;
+      background: #F5F5F5;
+      /* Optional: smooth scrolling */
+      -webkit-overflow-scrolling: touch;
+      scroll-behavior: smooth;
+    }
+    .responsive-map {
+      height: 100vh;
+      width: auto;
+      display: block;
+      /* Prevent image selection/drag */
+      user-drag: none;
+      user-select: none;
+      -webkit-user-drag: none;
+      -webkit-user-select: none;
+      pointer-events: none;
+      margin: 0 auto;
+    }
+    /* Ensure UI buttons are above the map */
+    .bottom-center-buttons,
+    button[onclick*="index.html"],
+    button[onclick*="map-dark.html"] {
+      z-index: 10;
+    }
+  </style>
+</head>
+<body>
+  <div class="map-scroll-container">
+    <img src="asset/hnmt-map.svg" alt="Hanoi Metro Map" class="responsive-map">
+  </div>
+  
+<button onclick="window.location.href='index.html'" style="position: absolute; right: 24px; top: 25px; width: 38px; height: 37px; padding: 0; border: none; background: #8CC63F; border-radius: 9999px; cursor: pointer; display: flex; align-items: center; justify-content: center;">
+  <span style="color: white; font-size: 22px; font-weight: bold; font-family: Arial, sans-serif; line-height: 1;">&#10005;</span>
+</button>
+
+  <div class="bottom-center-buttons">
+    <button onclick="window.location.href='index.html'" style="width: 52px; height: 52px; padding: 0; border: none; background: #005AAB; border-radius: 9999px; cursor: pointer; display: flex; align-items: center; justify-content: center;">
+      <span style="color: white; font-size: 20px; font-family: 'ND Kern', sans-serif; font-weight: 700;">
+        2A
+      </span>
+    </button>
+
+    <button onclick="window.location.href='lineM3.html'" style="width: 52px; height: 52px; padding: 0; border: none; background: #F1592A; border-radius: 9999px; cursor: pointer; display: flex; align-items: center; justify-content: center;">
+      <span style="color: white; font-size: 20px; font-family: 'ND Kern', sans-serif; font-weight: 700;">
+        M3
+      </span>
+    </button>
+  </div>
+
+<button onclick="window.location.href='map-dark.html'" style="position: absolute; right: 24px; bottom: 32px; width: 25px; height: 25px; padding: 0; border: none; background: #143F9A; border-radius: 9999px; cursor: pointer;">
+  <img src="asset/light.svg" alt="Detail" style="width: 16px; height: 16px; display: block; margin: auto;" />
+</button>
+</body>
+</html>
