@@ -10,11 +10,20 @@
 <body>
 <div data-layer="Hanoi metro/ Các tuyến tàu & Lịch trính chạy tàu/ Bản đồ trực tuyến/ Night - 768px" class="HanoiMetroCCTuyNTULChTrNhChYTUBNTrCTuyNNight768px" style="width: 320px; height: 1597px; position: relative; background: linear-gradient(0deg, #031F62 0%, #031F62 100%); overflow: hidden;">
 <!--Heading-->    
-<button class="hamburger-menu" style="width: 40px; height: 40px; position: absolute; top: 20px; left: 20px; display: flex; flex-direction: column; justify-content: center; align-items: center; z-index: 10; background: transparent; border: none; cursor: pointer;">
-    <span style="display: block; width: 28px; height: 4px; background: white; border-radius: 2px; margin: 3px 0;"></span>
-    <span style="display: block; width: 28px; height: 4px; background: white; border-radius: 2px; margin: 3px 0;"></span>
-    <span style="display: block; width: 28px; height: 4px; background: white; border-radius: 2px; margin: 3px 0;"></span>
-</button>    
+<!-- Blue hamburger menu -->
+<button class="hamburger-menu" id="hamburgerBtn" style="width: 40px; height: 40px; position: absolute; top: 20px; left: 20px; display: flex; flex-direction: column; justify-content: center; align-items: center; z-index: 10; background: transparent; border: none; cursor: pointer;">
+  <span style="display: block; width: 28px; height: 4px; background: white; border-radius: 2px; margin: 3px 0;"></span>
+  <span style="display: block; width: 28px; height: 4px; background: white; border-radius: 2px; margin: 3px 0;"></span>
+  <span style="display: block; width: 28px; height: 4px; background: white; border-radius: 2px; margin: 3px 0;"></span>
+</button>
+
+<!-- Dropdown navigation -->
+<div id="dropdownNav" style=" font-family: 'ND Kern';display:none; position:absolute; top:65px; left:20px; background:white; border:1px solid #143F9A; border-radius:8px; box-shadow:0 2px 8px rgba(0,0,0,0.1); z-index:20; min-width:180px;">
+  <a href="https://ptk2234.github.io/Hanoi-Metro/" style="display:block; padding:12px 20px; color:#143F9A; text-decoration:none; font-weight:600;">Trang chủ</a>
+  <a href="https://ptk2234.github.io/Hanoi-Metro-Map/" style="display:block; padding:12px 20px; color:#143F9A; text-decoration:none;">Bản đồ Metro</a>
+  <a href="#" style="display:block; padding:12px 20px; color:#143F9A; text-decoration:none;" onclick="alert('This function unavailable')">Giá vé</a> 
+  <a href="#" style="display:block; padding:12px 20px; color:#143F9A; text-decoration:none;" onclick="alert('This function unavailable')">Liên hệ</a>
+</div>    
     
 <button style="position: absolute; left: 140px; top: 20px; width: 36px; height: 35px; padding: 0; border: none; background: none; cursor: pointer;">
   <img src="asset/x33.svg" alt="Icon" style="width: 100%; height: 100%; object-fit: contain;">
@@ -103,5 +112,8 @@
 </div>
 
 </div>
+
+<script src="script.js"></script>
+
 </body>
 </html>
